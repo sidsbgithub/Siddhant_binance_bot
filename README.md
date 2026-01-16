@@ -1539,48 +1539,6 @@ This is an educational project. If you'd like to contribute:
 5. Update documentation
 6. Submit a pull request
 
-## Changelog
-
-### Version 1.0.0 (Current)
-- Initial release
-- Market order execution
-- Limit order execution
-- Stop-limit order execution
-- OCO order execution
-- TWAP strategy implementation
-- Grid trading strategy implementation
-- Comprehensive logging
-- Input validation
-- Interactive CLI interface
-- Full documentation
-
-## License
-
-This project is for educational purposes only. Use at your own risk.
-
-## Disclaimer
-
-**IMPORTANT DISCLAIMERS:**
-
-1. **Educational Purpose**: This bot is created for educational purposes to demonstrate trading bot development and API integration.
-
-2. **Testnet Only**: This bot is designed exclusively for Binance Futures Testnet. Do not use with production API keys or real funds.
-
-3. **No Warranty**: This software is provided "as is" without warranty of any kind. The authors are not responsible for any losses or damages.
-
-4. **Trading Risks**: Cryptocurrency trading involves substantial risk of loss. This bot does not guarantee profits.
-
-5. **Not Financial Advice**: This bot and its documentation do not constitute financial advice. Always do your own research.
-
-6. **API Usage**: Ensure you comply with Binance's API terms of service and usage guidelines.
-
-7. **Security**: Always keep your API keys secure. Never share them or commit them to version control.
-
-8. **Testing Required**: Thoroughly test any modifications before use. Start with small quantities.
-
-9. **No Support**: This is an educational project with no official support. Use community resources for help.
-
-10. **Regulatory Compliance**: Ensure your trading activities comply with local laws and regulations.
 
 ## Acknowledgments
 
@@ -1593,18 +1551,3 @@ This project is for educational purposes only. Use at your own risk.
 - Binance Futures Testnet: https://testnet.binancefuture.com
 - Binance API Documentation: https://binance-docs.github.io/apidocs/futures/en/
 - python-binance Documentation: https://python-binance.readthedocs.io/
-
-## Support
-
-For issues and questions:
-1. Check this README and documentation
-2. Review the troubleshooting section
-3. Check `bot.log` for error details
-4. Review the requirements and design documents in `.kiro/specs/`
-5. Consult Binance API documentation
-
----
-
-**Happy Trading on Testnet! 🚀**
-
-Remember: This is a learning tool. Always test thoroughly and never risk real funds without proper testing and risk management.

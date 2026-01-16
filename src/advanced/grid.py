@@ -505,16 +505,16 @@ class GridStrategy:
         grid_levels = self.calculate_grid_levels(lower_price, upper_price, grids)
         
         # Calculate quantity per grid based on total investment
-        # Simplified: divide total investment by number of grids and average price
-        avg_price = (lower_price + upper_price) / 2
-        quantity_per_grid = (total_investment / grids) / avg_price
+        # Simplified: divide total investment by number of grids
+        quantity_per_grid = total_investment / grids
         
         self.logger.info(
             'GridStrategy',
             'Grid parameters calculated',
             {
                 'grid_levels': len(grid_levels),
-                'avg_price': avg_price,
+                'lower_price': lower_price,
+                'upper_price': upper_price,
                 'quantity_per_grid': quantity_per_grid
             }
         )

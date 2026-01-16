@@ -574,6 +574,16 @@ class BinanceClient:
             
             # Execute OCO order using spot API (OCO not available on Futures)
             # For testnet, we'll use the spot OCO endpoint
+            # Determine order types based on side
+            # For BUY: limit order below (SELL), stop above (STOP_LOSS)
+            # For SELL: limit order above (SELL), stop below (STOP_LOSS)
+            if side == 'BUY':
+                above_type = 'STOP_LOSS'
+                below_type = 'LIMIT'
+            else:  # SELL
+                above_type = 'LIMIT'
+                below_type = 'STOP_LOSS'
+            
             response = self.client.create_oco_order(
                 symbol=symbol,
                 side=side,
@@ -581,7 +591,9 @@ class BinanceClient:
                 price=price,
                 stopPrice=stop_price,
                 stopLimitPrice=stop_limit_price,
-                stopLimitTimeInForce='GTC'
+                stopLimitTimeInForce='GTC',
+                aboveType=above_type,
+                belowType=below_type
             )
             
             self.logger.log_api_response('create_oco_order', response)
